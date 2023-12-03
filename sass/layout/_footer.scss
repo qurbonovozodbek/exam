@@ -1,0 +1,133 @@
+// FOOTER
+
+.footer {
+    padding-top: 48px;
+    padding-bottom: 64px;
+    background-color: rgb(29 36 47);
+    display: flex;
+    gap: 64px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    &_call-center {
+        width: 320px;
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 35px;
+        }
+        span {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            line-height: 20px;
+        }
+        p {
+            font-size: 16px;
+            font-weight: 700;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &_tolov {
+        h4 {
+            font-size: 20px;
+            font-weight: 700;
+        }
+        &-0 {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+
+            &_1 {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                .footer_card {
+                    width: 142px;
+                    height: 53px;
+                    border-radius: 12px;
+                    background-color: rgb(34 44 58);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    transition: all;
+                    img {
+                        width: 80px;
+                        height: 40px;
+                        transition: all;
+                    }
+                }
+                .footer_card:hover {
+                    transition: 0.3s;
+                    transform: scale(115%);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    &_information {
+        display: flex;
+        gap: 40px;
+        margin-left: 20px;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+
+            li {
+                font-size: 16px;
+                font-weight: 700;
+                margin-bottom: 12px;
+
+                a {
+                    font-size: 12px;
+                    font-weight: 700;
+                    color: #6c7178;
+                }
+                a:hover {
+                    color: #fff;
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+// FINALY FOOTER
+
+.footer_media {
+    background-color: rgb(34 44 58);
+    padding: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-title {
+        span {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+    }
+    &-icon {
+        a {
+            display: flex;
+            gap: 20px;
+            cursor: pointer;
+
+            img {
+                transition: all;
+            }
+            img:hover {
+                transition: 0.3s;
+                transform: scale(140%);
+            }
+        }
+    }
+}

@@ -1,0 +1,776 @@
+// Base Folder
+@import "./base/normalize";
+@import "./base/reset";
+@import "./base/typography";
+
+// Components Folder
+@import "./components/button";
+@import "./components/card";
+
+// Layout Folder
+@import "./layout/header";
+@import "./layout/footer";
+
+// SLIDER
+
+.slider {
+    width: 1430px;
+    height: 300px;
+    max-width: 100vw;
+    position: relative;
+    overflow: hidden;
+
+    .list {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        display: flex;
+        width: max-content;
+        transition: all 0.7s;
+
+        img {
+            width: 1440px;
+            height: 300px;
+            max-width: 100vw;
+            object-fit: cover;
+        }
+    }
+
+    .buttons {
+        position: absolute;
+        top: 140px;
+        left: 5%;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: hsla(0,0%,100%,.2);
+            border: none;
+            color: #fff;
+            font-family: "Golos Text" sans-serif;
+            font-weight: bold;
+            transition: all;
+        }
+        button:hover {
+            background-color: red;
+            transform: scale(130%);
+            transition: 0.4s;
+            cursor: pointer;
+        }
+        button:active {
+            background-color: hsla(0,0%,100%,.2);
+            transition: 0.1s;
+        }
+    }
+    .dots {
+        position: absolute;
+        top: 255px;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+    .dots li {
+        list-style: none;
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        margin: 20px;
+        border-radius: 20px;
+    }
+    .dots li.active {
+            width: 30px;
+    }
+}
+
+// MENU
+
+.menu_kategory {
+    padding: 0 16px;
+    margin: 34px 0;
+
+
+    &-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h2 {
+            font-weight: bold;
+            font-size: 28px;
+        }
+
+        span {
+            color: #0b2b5e;
+        }
+        span:hover {
+            color: #1658c4;
+            text-shadow: 0 0 25px #1658c4;
+        }
+    }
+    &-cards {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-top: 16px;
+
+        .menu_kategory-card {
+            transition: all;
+            width: 218px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 16px;
+            padding: 16px;
+            border-radius: 18px;
+            border: 1px solid rgba(217,46,21,.06);
+
+            &_img {
+                border-radius: 10px;
+                padding: 10px;
+                background-color: rgba(217,46,21,.06);
+            }
+
+            span {
+                font-family: "Golos Text" sans-serif;
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+        .menu_kategory-card:hover {
+            background-color: rgb(255, 192, 182);
+            cursor: pointer;
+            transition: 0.4s;
+        }
+    }
+}
+
+// SECTION
+
+.artel { 
+    h1 {
+        font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    &_navigation {
+        margin-bottom: 18px;
+        ul {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        
+            li {
+                padding: 6px 14px;
+                border-radius: 40px;
+                background-color: rgb(242, 239, 239);
+                cursor: pointer;
+
+                a {
+                    font-weight: 700;
+                    font-size: 12px;
+                    color: #6c7178;
+                }
+            }
+
+            li:hover {
+                background-color: #ffffff;
+            }
+        }
+        .active {
+            background-color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2px;
+            width: 79px;
+            height: 29px;
+
+            a {
+                color: #fff;
+            }
+            a:hover {
+                color: black;
+            }
+        }
+    }
+    &_cards {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 50px;
+    }
+    &_cards-card {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        padding: 12px;
+
+        &_btn {
+            padding: 4px 12px;
+            border-radius: 6px;
+            background-color: #0e7e2e;
+            border: none;
+            cursor: pointer;
+
+            color: #fff;
+            font-weight: 700;
+            font-size: 12px;
+
+        }
+        &_btn:hover {
+            box-shadow: 0 0 5px #0e7e2e;
+        }
+
+        &_img {
+            width: 188px;
+            height: 190px;
+        }
+        del {
+            font-size: 12px;
+            font-weight: 500;
+            color: #6c7178;
+            margin-top: 8px;
+            margin-left: 6px;
+        }
+        h2 {
+            margin-top: 8px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .artel_kredit {
+            padding: 4px 12px;
+            border: 1px solid rgb(11 43 94);
+            border-radius: 8px;
+            margin: 6px 0px;
+
+            span {
+                line-height: normal;
+                font-size: 12px;
+                font-weight: 700;
+                color: rgb(11 43 94);
+            }
+        }
+        .artel_bonus {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+
+            span {
+                font-weight: 700;
+                font-size: 12px;
+                color: #6c7178;
+            }
+        }
+        p {
+            margin-top: 12px;
+            font-size: 14px;
+            font-weight: normal;
+            color: #6c7178;
+        }
+        .artel_stars {
+            display: flex;
+            gap: 4px;
+            margin-top: 35px;
+            margin-bottom: 5px;
+
+            span {
+                margin-top: -5px;
+                color: #6c7178;
+                font-size: 14px;
+                font-weight: 600;
+            }
+        }
+        .artel_shop {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+
+            &-savat {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 14px 22px;
+                background-color: rgb(217 46 21);
+                border-radius: 10px;
+                transition: all;
+            }
+            &-savat:hover {
+                background-color: rgb(255, 140, 123);
+                transition: 0.3s;
+                transform: scale(110%);
+                cursor: pointer;
+            }
+            &-yurak {
+                padding: 14px;
+                border-radius: 10px;
+                background-color: rgb(247 248 248);
+                transition: all;
+            }
+            &-yurak:hover {
+                background-color: rgb(255, 156, 141);
+                transition: 0.3s;
+                cursor: pointer;
+            }
+        }
+    }
+    &_cards-card:hover{
+        border-radius: 12px;
+        cursor: pointer;
+    }
+    &_left {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        margin-right: -30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 6px -3px 47px -2px rgba(0,0,0,0.67);
+        transition: all;
+    }
+    &_left:hover {
+        background-color: #ff5353;
+        transition: all 0.4s;
+        transform: scale(130%);
+        cursor: pointer;
+    }
+    &_right {
+        width: 30px;
+        height: 30px;
+        margin-left: -30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 6px -3px 47px -2px rgba(0,0,0,0.67);
+        transition: all;
+    }
+    &_right:hover {
+        background-color: rgb(255, 75, 75);
+        transition: all 0.4s;
+        transform: scale(130%);
+        cursor: pointer;
+    }
+
+    .artel_cards-card_btn-red {
+        background-color: rgb(211, 33, 64);
+        color: #fff;
+        padding-top: 4px;
+        padding-bottom: 4px;
+        padding-left: 12px;
+        padding-right: 12px;
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 700;
+        font-family: "Golos Text" sans-serif;
+        border: none;
+    }
+    .artel_cards-card_btn-red:hover {
+        background-color: rgb(175, 0, 29);
+        cursor: pointer;
+        box-shadow: 0 0 5px red;
+    }
+    &_savdo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 80px;
+        margin-bottom: 20px;
+
+        &-purple {
+            background-color: rgb(255, 0, 84);
+            padding: 4px 12px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+
+            color: #fff;
+            font-size: 12px;
+            font-weight: 700;
+        }
+        &-purple:hover {
+            background-color: rgb(255, 101, 152);
+        }
+    }
+    &_kredit-red {
+        padding: 6px 8px;
+        border-radius: 6px;
+        background-color: rgb(253 245 243);
+        margin-top: 15px;
+        margin-bottom: 5px;
+
+        span {
+            color: rgb(217 46 21);
+            font-size: 14px;
+            font-weight: 700;
+        }
+    }
+    &_xit-btn {
+        margin-top: 30px;
+        padding: 17px;
+        border-radius: 10px;
+        background-color: rgb(217 46 21);
+        border: none;
+        transition: all;
+        cursor: pointer;
+        color: #fff;
+        font-size: 14px;
+        font-weight: 600;
+
+        span {
+            color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 0 30px;
+        }
+    }
+    &_xit-btn:hover {
+        transition: 0.4s;
+        background-color: rgb(245, 113, 92);
+        transform: scale(115%);
+    }
+}
+
+// SLIDER 2
+
+.slider2{
+    width: 1440px;
+    height: 300px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.7s;
+}
+
+.slider2 .image{
+    display: none;
+    transition: all 0.7s;
+}
+
+.slider2 .image img{
+    width: 1440px;
+    height: 300px;
+    object-fit: cover;
+    transition: all 0.7;
+}
+
+.slider2 .button{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 5;
+    transition: all;
+}
+
+.slider2 .button a{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    vertical-align: middle;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    font-size: 20px;
+    user-select: none;
+    transition: all;
+}
+.slider2 .button a:hover {
+    background-color: #ff5353;
+    transition: 0.5s;
+    transform: scale(130%);
+}
+.slider2 .button a:active {
+    background-color: #000000;
+    transition: 0.2s;
+}
+.slider2 .button .prev{
+    border-radius: 5px 5px 5px 5px;
+}
+
+.slider2 .button .next{
+    border-radius: 5px 5px 5px 5px;
+}
+
+.dots{
+    text-align: center;
+    position: absolute;
+    bottom: 8px;
+    left: 45%;
+    padding: 5px 10px;
+    height: 30px;
+    border-radius: 15px;
+
+}
+
+.dot{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background: #fff;
+    display: inline-block;
+    margin: 0 2px;
+}
+
+.active, .dot:hover{
+    width: 30px;
+    border-radius: 10px;
+    height: 10px;
+}
+
+// NOUTBUK
+
+.noutbuk {
+    h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    &_cards {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+
+        &-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            padding: 12px;
+
+            &_img {
+                width: 190px;
+                height: 190px;
+            }
+
+            &_rating {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                margin-top: 10px;
+
+                span {
+                    font-weight: 700;
+                    font-size: 14px;
+                    color: #6c7178;
+                    margin-top: -5px;
+                }
+            }
+            p {
+                font-size: 18px;
+                font-weight: 700;
+                color: #6c7178;
+                margin-top: 18px;
+                text-align: center;
+            }
+            &_bonus {
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                margin-top: 10px;
+
+                span {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #6c7178;
+                    margin-top: 3px;
+                }
+            }
+            h2 {
+                font-size: 18px;
+                font-weight: bold;
+                margin-top: 35px;
+            }
+            &_kredit {
+                display: flex;
+                align-items: center;
+                padding: 4px;
+                background-color: rgb(248 248 249);
+                gap: 4px;
+                margin-top: 15px;
+                border-radius: 10px;
+
+                &-summa {
+                    padding: 5px;
+                    border-radius: 10px;
+                    background-color: #fff;
+
+                    span {
+                        font-size: 14px;
+                        font-weight: 600;
+                    }
+                }
+                span {
+                    font-size: 12px;
+                    font-weight: 700;
+                    color: #6c7178;
+                }
+            }
+        }
+    }
+    .artel_right {
+        margin-left: 100px;
+    }
+}
+
+// BRENDLAR
+
+.brendlar {
+    h1 {
+        font-size: 26px;
+        font-weight: bold;
+        margin-top: 25px;
+        margin-bottom: 30px;
+    }
+    &_brend {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        .brends {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 226px;
+            height: 120px;
+            border-radius: 20px;
+            border: 1px solid rgb(202, 202, 202);
+            cursor: pointer; 
+            transition: all;
+        }
+        .brends:hover {
+            transition: 0.3s;
+            transform:scaleX(130%);
+            background-color: #ffc0c0;
+        }
+    }
+    .artel_left {
+        margin-right: -10px;
+    }
+    .artel_right {
+        margin-left: -10px;
+    }
+}
+
+// MEDIAPARK
+
+.mediapark {
+    h1 {
+        font-size: 26px;
+        font-weight: bold;
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+    &_cards {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+
+        &-card {
+            padding: 16px;
+            border-radius: 20px;
+            width: 225px;
+            padding-bottom: 40px;
+            border: 1px solid rgb(243, 243, 243);
+
+            &_img {
+                width: 48px;
+                height: 48px;
+                border-radius: 10px;
+                background-color: rgb(253 245 243);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+            h3 {
+                font-size: 16px;
+                font-weight: 700;
+                margin-bottom: 15px;
+                line-height: 25px;
+            }
+            span {
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 700;
+                color: #6c7178;
+            }
+            transition: all;
+        }
+        &-card:hover {
+            transition: 0.4s;
+            cursor: pointer;
+            background-color: #e2e2e2;
+        }
+    }
+}
+
+// SOCIAL
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(245, 245, 245);
+    margin-top: 100px;
+    padding: 0 16px;
+
+    &_information {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        span {
+            font-size: 17px;
+            line-height: 24px;
+            font-weight: 700;
+            color: #6c7178;
+            width: 390px;
+            margin-bottom: 15px;
+        }
+        &-img {
+            display: flex;
+            gap: 12px;
+            
+
+            a {
+                cursor: pointer;
+                transition: all;
+
+                img:hover {
+                    transform: scale(110%);
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+    &_img {
+        margin-top: -40px;
+    }
+}
+
+
